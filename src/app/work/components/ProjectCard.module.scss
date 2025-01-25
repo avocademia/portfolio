@@ -1,8 +1,10 @@
+@use'../../../styles/variables.scss';
+
 .projectCard {
     display: flex;
     flex-direction: column;
     margin: 10px 0 20px 0;
-    width: 80%;
+    width: 60%;
     border: solid 2px #f0f0f0;
     border-radius: 10px;
     padding: 10px;
@@ -16,17 +18,33 @@
     justify-content: center;
     margin-bottom: 10px;
   }
+
 .projectCard h1 {
     margin: 0;
     font-size: 2rem;
+    font-family: variables.$secondary-font;
 }
 
 .projectCard h4 {
     margin: 0;
+    font-size: 0.9rem;
+    font-weight: 600;
 }
 
 .projectCard p {
     margin: 0;
+    font-size: 0.7rem;
+    text-align: center;
+    width: 70%;
+    font-weight: 300;
+    line-height: 25px;
+}
+
+.projectCard ol {
+    margin: 0;
+    font-size: 0.7rem;
+    font-weight: 300;
+    list-style-type: circle;
 }
 
 .images {
@@ -91,9 +109,17 @@
     height: 0;
     opacity: 0;
     visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     transform: translateY(-10px);
     overflow: hidden;
     transition: max-height 0.7s ease, opacity 0.7s ease, visibility 0.7s ease, transform 0.7s ease;
+  }
+
+  .features {
+    margin-top: 10px;
   }
   
   .hiddenContent.visible {
@@ -101,5 +127,55 @@
     opacity: 1;
     visibility: visible;
     transform: translateY(0);
+  }
+
+  .stack {
+    margin-top: 20px;
+    max-width: 60%;
+    gap: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .stack button {
+    width: 100px;
+    padding: 5px 0 5px 0;
+    background-color: transparent;
+    border: 2px solid #f0f0f0;
+    color: #f0f0f0;
+    border-radius: 5px;
+  }
+
+  .repositories {
+    margin-top: 20px;
+  }
+
+  .repositories a {
+    font-size: 0.7rem;
+    color: rgb(154, 255, 255);
+    margin-left: 10px;
+  }
+
+  .repositories div {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+  }
+
+  .launch {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    margin-top: 20px;
+  }
+
+  .launch p {
+    margin-left: 10px;
+  }
+
+  .launch h6 {
+    margin: 0;
   }
   

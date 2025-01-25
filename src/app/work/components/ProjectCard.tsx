@@ -84,26 +84,32 @@ const ProjectCard = ({ project }: prop) => {
 
         <div className={`${styles.hiddenContent} ${isExpanded ? styles.visible : ''}`}>
             <p>{project.description}</p>
-            <div>
-                {project.key_features.map((feature, index) => (
-                    <p key={index}>{feature}</p>
-                ))}
+            <div className={styles.features}>
+                <h4>Key features:</h4>
+                <ol>
+                   {project.key_features.map((feature, index) => (
+                    <li key={index}>{feature}</li>
+                    ))}  
+                </ol>
+                
             </div>
-            <div>
+            <div className={styles.stack} >
                 {project.stack.map((stack, index) => (
                 <button key={index}>{stack}</button>
                 ))}
             </div>
-            <div>
-                <Icon icon="mdi:github" width={20} height={20}/>:
-                <a href={project.client}>client repository</a>
+            <div className={styles.repositories}>
+                <div>
+                    <Icon icon="mdi:github" width={20} height={20}/>:
+                    <a href={project.client}>client repository</a>
+                </div>
+                <div>
+                    <Icon icon="mdi:github" width={20} height={20} />:
+                    <a href={project.server}>server repository</a>
+                </div>
             </div>
-            <div>
-                <Icon icon="mdi:github" width={20} height={20} />:
-                <a href={project.server}>server repository</a>
-            </div>
-            <div>
-                Launch:
+            <div className={styles.launch}>
+                <h6>Launch:</h6>
                 <p>{project.launch_date}</p>
             </div>
             <div>
