@@ -127,14 +127,14 @@ const ProjectCard = ({ project }: prop) => {
                 ))}
             </div>
             <div className={styles.repositories}>
-                <div>
+                {project.client && <div>
                     <Icon icon="mdi:github" width={20} height={20}/>:
                     <a href={project.client} target='_blank'>client repository</a>
-                </div>
-                <div>
+                </div>}
+                {project.server && <div>
                     <Icon icon="mdi:github" width={20} height={20} />:
                     <a href={project.server} target='_blank'>server repository</a>
-                </div>
+                </div>}
             </div>
             <div className={styles.launch}>
                 <h6>Launch:</h6>

@@ -6,8 +6,8 @@ export type project = {
     stack: string[],
     launch_date: string,
     launched: boolean,
-    client: string,
-    server: string,
+    client: string|undefined,
+    server: string|undefined,
     website: string|undefined,
     photos: string[]
 }

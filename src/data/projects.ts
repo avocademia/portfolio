@@ -51,7 +51,7 @@ export const projects = [
                       laborum. Curabitur pretium tincidunt lacus. Nulla gravida.
                      `,
         key_features: [
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+            'Minimalist intuitive design',
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
@@ -61,20 +61,17 @@ export const projects = [
             'Express',
             'MySql',
         ],
-        launch_date: '2025-05-01',
+        launch_date: 'N/A',
         launched: false,
-        client: 'https://www.github.com/avocademia',
-        server: 'https://www.github.com/avocademia',
+        client: 'https://www.github.com/avocademia/crafted-client',
+        server: 'https://www.github.com/avocademia/crafted-server',
         website: undefined,
         photos: [
             '/crafted/home.png',
-            '/crafted/shop.png',
             '/crafted/klosets.png',
+            '/crafted/kloset.png',
             '/crafted/product.png',
-            '/crafted/admin.png',
-            '/crafted/edit-product.png',
-            '/crafted/user.png',
-            '/crafted/signin.png',
+            '/crafted/admin.png',     
         ]
     },
 
@@ -102,14 +99,13 @@ export const projects = [
         launch_date: '2025-02-01',
         launched: false,
         client: 'https://www.github.com/avocademia',
-        server: 'https://www.github.com/avocademia',
+        server: undefined,
         website: undefined,
         photos: [
-            '/domfujon/dashboard.png',
-            '/domfujon/deck.png',
-            '/domfujon/discuss.png',
-            '/domfujon/discover.png',
-            '/domfujon/comic.png',
+            '/comfujon/dashboard.png',
+            '/comfujon/deck.png',
+            '/comfujon/discuss.png',
+            '/comfujon/discover.png',
         ]
     },
 ]
