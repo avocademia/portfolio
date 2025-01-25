@@ -1,0 +1,174 @@
+@use'../styles/variables.scss';
+
+.page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+.page h1 {
+    font-size: 2rem;
+}
+
+.page h3 {
+    font-size: 1.5rem;
+}
+
+.action {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.pageBtn {
+    margin-top: 40px;
+    width: 140px;
+    height: 50px;
+    font-size: 1.2rem;
+    background-color: variables.$background-color;
+    color: variables.$text-color;
+    border-radius: 30px;
+    cursor: pointer;
+    position: relative;
+    border: none;
+}
+
+.pageBtn::after, .pageBtn::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: variables.$text-color;
+    border-radius: 30px;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    z-index: -1;
+    padding: 2px;
+    transition: all 0.3s ease-in-out;
+}
+
+.pageBtn:hover::after, .pageBtn:hover::before  {
+    background-image: conic-gradient(magenta, cyan, yellow, magenta);
+    background-color: transparent;
+    padding: 4px;
+}
+
+.pageBtn:hover::before {
+    opacity: 0.8;
+}
+
+.pageBtn::before {
+    filter: blur(1rem);
+    opacity: 0;
+}
+
+.external {
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 30px;
+}
+
+.upworkBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: variables.$background-color;
+    cursor: pointer;
+    position: relative;
+    border-radius: 50%;
+    border: none;
+    padding: 12px;
+}
+
+.upworkBtn::after, .upworkBtn::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    z-index: -1;
+    padding: 2px;
+    transition: all 0.3s ease-in-out;
+}
+
+.upworkBtn:hover::after, .upworkBtn:hover::before  {
+    background-image: conic-gradient(transparent, #69fc86);
+    padding: 3px;
+}
+
+.upworkBtn:hover::before {
+    opacity: 0.8;
+}
+
+.upworkBtn::before {
+    filter: blur(1rem);
+    opacity: 0;
+}
+
+
+.githubBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: variables.$background-color;
+    cursor: pointer;
+    position: relative;
+    border-radius: 50%;
+    border: none;
+    padding: 12px;
+}
+
+.githubBtn::after, .githubBtn::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    z-index: -1;
+    padding: 2px;
+    transition: all 0.3s ease-in-out;
+}
+
+.githubBtn:hover::after, .githubBtn:hover::before  {
+    background-image: conic-gradient(transparent, #c551ff);
+    padding: 3px;
+}
+
+.githubBtn:hover::before {
+    opacity: 0.8;
+}
+
+.githubBtn::before {
+    filter: blur(1rem);
+    opacity: 0;
+}
+
+.githubIcon, .upworkIcon {
+    color: #f8f4f4;
+    transition: all 0.3s ease-in-out;
+}
+
+.githubIcon:hover {
+    color: #c551ff;
+    transform: scale(1.3);
+}
+
+.upworkIcon:hover {
+    color: #69fc86;
+    transform: scale(1.2);
+}
