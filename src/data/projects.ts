@@ -2,29 +2,31 @@ export const projects = [
     {
         name: 'Saint Safaris',
         role: 'Lead Developer',
-        description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                      Sed do eiusmod tempor incididunt ut labore et dolore magna 
-                      aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
-                      ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis 
-                      aute irure dolor in reprehenderit in voluptate velit esse cillum 
-                      dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat 
-                      non proident, sunt in culpa qui officia deserunt mollit anim id est 
-                      laborum. Curabitur pretium tincidunt lacus. Nulla gravida.
+        description: `A comprehensive user friendly web application for Saint Travel & Safaris, 
+                      combining a React frontend with a Strapi backend to create a seamless 
+                      experience for both staff and users. The application enables the company’s 
+                      staff to manage and access data effortlessly without requiring any coding 
+                      skills, thanks to a user-friendly strapi interface and intuitive forms that 
+                      dynamically responds to user inputs sending submitted forms to the company emails. 
+                      It features a thoughtfully designed tour review system that allows users to submit 
+                      one review per tour, promoting fairness and authenticity. The app is fully mobile-responsive
+                      ensureing a smooth and accessible experience across all devices. 
                      `,
         key_features: [
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+            'Custom user authentication built on top of strapi',
+            'Tour review system',
+            'Responsive and adaptive forms for various services',
+            'Strapi CMS for admin access to data'
         ],
         stack: [
-            'Lorem',
-            'Lorem',
-            'Lorem',
+            'React',
+            'Strapi',
+            'MySql',
         ],
-        launch_date: '2025-02-01',
-        client: 'https://www.github.com/avocademia',
-        server: 'https://www.github.com/avocademia',
+        launch_date: '2025-02-15',
+        launched: false,
+        client: 'https://www.github.com/avocademia/saintsafaris-client',
+        server: 'https://www.github.com/avocademia/saintsafaris-backend',
         website: undefined,
         photos: [
             '/saint/home.png',
@@ -55,11 +57,12 @@ export const projects = [
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
         ],
         stack: [
-            'Lorem',
-            'Lorem',
-            'Lorem',
+            'Next',
+            'Express',
+            'MySql',
         ],
         launch_date: '2025-05-01',
+        launched: false,
         client: 'https://www.github.com/avocademia',
         server: 'https://www.github.com/avocademia',
         website: undefined,
@@ -94,11 +97,10 @@ export const projects = [
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
         ],
         stack: [
-            'Lorem',
-            'Lorem',
-            'Lorem',
+            'Next',
         ],
         launch_date: '2025-02-01',
+        launched: false,
         client: 'https://www.github.com/avocademia',
         server: 'https://www.github.com/avocademia',
         website: undefined,

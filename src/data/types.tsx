@@ -5,6 +5,7 @@ export type project = {
     key_features: string[],
     stack: string[],
     launch_date: string,
+    launched: boolean,
     client: string,
     server: string,
     website: string|undefined,

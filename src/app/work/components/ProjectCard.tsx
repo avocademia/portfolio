@@ -28,6 +28,8 @@ const ProjectCard = ({ project }: prop) => {
     setIsExpanded((prev) => !prev);
   }
 
+  console.log(project.stack)
+
   return (
     <article className={styles.projectCard}>
         <div className={styles.title}>
@@ -38,14 +40,14 @@ const ProjectCard = ({ project }: prop) => {
         <div className={styles.images}>
             <div className={styles.navWrapper}>
                 <div
-                  className={`${styles.navButton} ${styles.prev}`}
+                  className={`${styles.navButton}`}
                   aria-label="Previous"
                   onClick={() => swiperRef.current?.slidePrev()}
                 >
                   <Icon icon="mdi:chevron-left" className={styles.navIcon} />
                 </div>
                 <div
-                  className={`${styles.navButton} ${styles.next}`}
+                  className={`${styles.navButton}`}
                   aria-label="Next"
                   onClick={() => swiperRef.current?.slideNext()}
                 >
@@ -70,7 +72,7 @@ const ProjectCard = ({ project }: prop) => {
             >
                 {project.photos.map((photo, index) => (
                     <SwiperSlide key={index} >
-                        <Image src={photo} alt="project photo" width={700} height={300} />
+                        <Image src={photo} alt="project photo" width={700} height={300} unoptimized/>
                     </SwiperSlide>
                 ))}
             </Swiper>
@@ -95,27 +97,53 @@ const ProjectCard = ({ project }: prop) => {
             </div>
             <div className={styles.stack} >
                 {project.stack.map((stack, index) => (
-                <button key={index}>{stack}</button>
+                    <button 
+                        key={index} 
+                        className={`
+                            ${stack === 'React'? styles.react : ''}
+                            ${stack === 'Next'? styles.next : ''}
+                            ${stack === 'Strapi'? styles.strapi : ''}
+                            ${stack === 'Express'? styles.express : ''}
+                            ${stack === 'MySql'? styles.mysql : ''}
+                        `    
+                        }
+                    >
+                        <Icon 
+                            icon={`
+                                ${stack === 'React'? "akar-icons:react-fill": ''}
+                                ${stack === 'Next'? "teenyicons:nextjs-outline": ''}
+                                ${stack === 'Strapi'? "logos:strapi-icon": ''}
+                                ${stack === 'Express'? "lineicons:expressjs": ''}
+                                ${stack === 'MySql'? "fontisto:mysql": ''}
+                            `}  
+                        />
+                        { stack === "React" && <Icon icon="akar-icons:react-fill"/>}
+                        { stack === "Next" && <Icon icon="teenyicons:nextjs-outline"/>}
+                        { stack === "Strapi" && <Icon icon="logos:strapi-icon"/>}
+                        { stack === "Express" && <Icon icon="lineicons:expressjs"/>}
+                        { stack === "MySql" && <Icon icon="fontisto:mysql"/>}
+                        {stack}
+                    </button>
                 ))}
             </div>
             <div className={styles.repositories}>
                 <div>
                     <Icon icon="mdi:github" width={20} height={20}/>:
-                    <a href={project.client}>client repository</a>
+                    <a href={project.client} target='_blank'>client repository</a>
                 </div>
                 <div>
                     <Icon icon="mdi:github" width={20} height={20} />:
-                    <a href={project.server}>server repository</a>
+                    <a href={project.server} target='_blank'>server repository</a>
                 </div>
             </div>
             <div className={styles.launch}>
                 <h6>Launch:</h6>
                 <p>{project.launch_date}</p>
             </div>
-            <div>
+            {project.launched && <div>
                 <Icon icon="mdi:web" width={20} height={20} />:
-                <p>{project.website}</p>
-            </div>
+                <a href={project.website} target='_blank'>{project.website}</a>
+            </div>}
         </div>
     </article>
   )

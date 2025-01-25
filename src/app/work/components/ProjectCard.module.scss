@@ -56,7 +56,7 @@
 }
 
 .swiper {
-    width: 58%;
+    width: 78%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -141,11 +141,16 @@
 
   .stack button {
     width: 100px;
-    padding: 5px 0 5px 0;
     background-color: transparent;
     border: 2px solid #f0f0f0;
     color: #f0f0f0;
     border-radius: 5px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    justify-content: center;
+    flex-direction: row;
+    padding: 5px;
   }
 
   .repositories {
@@ -177,5 +182,30 @@
 
   .launch h6 {
     margin: 0;
+  }
+
+  .react {
+    color: rgb(87, 161, 252) !important;
+    border: 2px solid rgb(87, 161, 252) !important;
+  }
+
+  .next {
+    color: rgb(255, 255, 255) !important;
+    border: 2px solid rgb(255, 255, 255) !important;
+  }
+
+  .express {
+    color: rgb(87, 252, 211) !important;
+    border: 2px solid rgb(87, 252, 211) !important;
+  }
+
+  .mysql {
+    color: rgb(216, 162, 252) !important; 
+    border: 2px solid rgb(216, 162, 252) !important;
+  }
+
+  .strapi {
+    color: #4945ff!important;
+    border: 2px solid #4945ff !important;
   }
   
