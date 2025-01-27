@@ -6,10 +6,52 @@
     align-items: center;
     flex-direction: column;
     width: 100%;
+    height: 100vh;
+    background-image: url('/background.jpg');
+}
+
+.page::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Black overlay with 50% opacity */
+    z-index: 1;
+}
+
+.info {
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 10;
+}
+
+.info h1 {
+    margin: 20px 0 0 0;
+    color: #69fc86;
+}
+
+.info h3 {
+    margin: 20px 0 0 0;
+}
+
+.dp {
+    height: 180px;
+    z-index: 10;
+}
+
+.profile {
+    border-radius: 50%;
+    border: 2px solid #f0f0f0;
 }
 
 .page h1 {
-    font-size: 2rem;
+    font-size: 3rem;
+    font-family: variables.$secondary-font;
 }
 
 .page h3 {
@@ -17,6 +59,14 @@
 }
 
 .action {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+}
+
+.internal {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -52,9 +102,10 @@
 }
 
 .pageBtn:hover::after, .pageBtn:hover::before  {
-    background-image: conic-gradient(magenta, cyan, yellow, magenta);
+    background-image: conic-gradient(from var(--angle), magenta, cyan, yellow, magenta);
     background-color: transparent;
     padding: 4px;
+    animation: 3s spin linear infinite;
 }
 
 .pageBtn:hover::before {
@@ -73,6 +124,48 @@
     justify-content: center;
     flex-direction: row;
     gap: 30px;
+}
+
+.linkedin {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: variables.$background-color;
+    cursor: pointer;
+    position: relative;
+    border-radius: 50%;
+    border: none;
+    padding: 12px;
+}
+
+.linkedin::after, .linkedin::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    z-index: -1;
+    padding: 2px;
+    transition: all 0.3s ease-in-out;
+}
+
+.linkedin:hover::after, .linkedin:hover::before  {
+    background-image: conic-gradient(from var(--angle), transparent, #527ffa);
+    padding: 3px;
+    animation: 3s spin linear infinite;
+}
+
+.linkedin:hover::before {
+    opacity: 0.8;
+}
+
+.linkedin::before {
+    filter: blur(1rem);
+    opacity: 0;
 }
 
 .upworkBtn {
@@ -103,8 +196,9 @@
 }
 
 .upworkBtn:hover::after, .upworkBtn:hover::before  {
-    background-image: conic-gradient(transparent, #69fc86);
+    background-image: conic-gradient(from var(--angle), transparent, #69fc86);
     padding: 3px;
+    animation: 3s spin linear infinite;
 }
 
 .upworkBtn:hover::before {
@@ -144,9 +238,24 @@
     transition: all 0.3s ease-in-out;
 }
 
+@property --angle {
+    syntax: '<angle>';
+    initial-value: 0deg;
+    inherits: false;
+}
 .githubBtn:hover::after, .githubBtn:hover::before  {
-    background-image: conic-gradient(transparent, #c551ff);
+    background-image: conic-gradient(from var(--angle), transparent, #c551ff);
     padding: 3px;
+    animation: 3s spin linear infinite;
+}
+
+@keyframes spin {
+    from {
+        --angle: 0deg;
+    }
+    to {
+        --angle: 360deg;
+    }
 }
 
 .githubBtn:hover::before {
@@ -158,7 +267,7 @@
     opacity: 0;
 }
 
-.githubIcon, .upworkIcon {
+.githubIcon, .upworkIcon, .linkedinIcon {
     color: #f8f4f4;
     transition: all 0.3s ease-in-out;
 }
@@ -170,5 +279,10 @@
 
 .upworkIcon:hover {
     color: #69fc86;
+    transform: scale(1.2);
+}
+
+.linkedinIcon:hover {
+    color: #527ffa;
     transform: scale(1.2);
 }

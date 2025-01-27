@@ -13,6 +13,7 @@ import 'swiper/css/pagination'
 import 'swiper/css/scrollbar'
 import 'swiper/css/effect-coverflow'
 import styles from './ProjectCard.module.scss'
+import {motion} from 'framer-motion'
 
 interface prop {
   project: project
@@ -28,10 +29,14 @@ const ProjectCard = ({ project }: prop) => {
     setIsExpanded((prev) => !prev);
   }
 
-  console.log(project.stack)
+  const transition = {
+    duration: 0.8,
+    delay: 0.5,
+    ease: [0, 0.71, 0.2, 1.01],
+  }
 
   return (
-    <article className={styles.projectCard}>
+    <motion.article initial={{scale: 0}} animate={{scale: 1}} transition={transition} className={styles.projectCard}>
         <div className={styles.title}>
             <h1>{project.name}</h1>
             <h4>{project.role}</h4>
@@ -145,7 +150,7 @@ const ProjectCard = ({ project }: prop) => {
                 <a href={project.website} target='_blank'>{project.website}</a>
             </div>}
         </div>
-    </article>
+    </motion.article>
   )
 }
 
