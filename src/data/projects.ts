@@ -69,11 +69,11 @@ export const projects = [
         server: 'https://www.github.com/avocademia/crafted-server',
         website: undefined,
         photos: [
-            '/crafted/home.png',
-            '/crafted/klosets.png',
-            '/crafted/kloset.png',
-            '/crafted/product.png',
-            '/crafted/admin.png',     
+            '/crafted/Home.png',
+            '/crafted/Klosets.png',
+            '/crafted/Kloset.png',
+            '/crafted/Product.png',
+            '/crafted/Admin.png',     
         ]
     },
 
