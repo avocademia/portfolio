@@ -41,20 +41,22 @@ export const projects = [
     {
         name: 'Crafted',
         role: 'Founder & Developer',
-        description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                      Sed do eiusmod tempor incididunt ut labore et dolore magna 
-                      aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
-                      ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis 
-                      aute irure dolor in reprehenderit in voluptate velit esse cillum 
-                      dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat 
-                      non proident, sunt in culpa qui officia deserunt mollit anim id est 
-                      laborum. Curabitur pretium tincidunt lacus. Nulla gravida.
+        description: `A platform meant to enable artisans to sell various products e.g 
+                      up-cycled apparel, art, pottery, books, digital downloads etc. It boasts 
+                      scalable architecture with a React.js front end and Node.js 
+                      back end, integrated with MySQL for efficient data management. This 
+                      prototype has favorable features like product categorization, 
+                      user-friendly dashboards, minimalistic straight foward design, and 
+                      highly responsive user interface with plans to include a secure 
+                      payment system and ai powered market place curation with the aid of 
+                      tenserflow. A finished product would address the gap in Kenya's market for 
+                      robust e-commerce experiences tailored for socialmedia-based thrift 
+                      stores and handcrafted goods, inspired by platforms like Etsy.
                      `,
         key_features: [
             'Minimalist intuitive design',
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+            'Intuitive shop powered by tensor-flow',
+            'Four different product types with custom properties',
         ],
         stack: [
             'Next',
@@ -78,20 +80,11 @@ export const projects = [
     {
         name: 'Comfujon',
         role: 'Founder & Developer',
-        description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                      Sed do eiusmod tempor incididunt ut labore et dolore magna 
-                      aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
-                      ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis 
-                      aute irure dolor in reprehenderit in voluptate velit esse cillum 
-                      dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat 
-                      non proident, sunt in culpa qui officia deserunt mollit anim id est 
-                      laborum. Curabitur pretium tincidunt lacus. Nulla gravida.
+        description: `A platform for posting and reading web-comics
+                      made on next.js.
                      `,
         key_features: [
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+            'to be updated',
         ],
         stack: [
             'Next',
@@ -102,10 +95,10 @@ export const projects = [
         server: undefined,
         website: undefined,
         photos: [
-            '/comfujon/dashboard.png',
+            '/comfujon/discover.png',
             '/comfujon/deck.png',
             '/comfujon/discuss.png',
-            '/comfujon/discover.png',
+            '/comfujon/dashboard.png', 
         ]
     },
 ]

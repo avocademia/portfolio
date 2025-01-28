@@ -105,24 +105,41 @@ const profile = () => {
         </section>
       </div>
       <div className={styles.external}>
-        <motion.button initial={{scale: 0}} animate={{scale: 1}} transition={transition}  className={styles.linkedin}>
-          <Icon icon="mdi:phone" width={30} height={30} className={styles.icon}/>
-        </motion.button>
-        <motion.button initial={{scale: 0}} animate={{scale: 1}} transition={transition}  className={styles.linkedin}>
-          <Icon icon="mdi:whatsapp" width={30} height={30} className={styles.icon}/>
-        </motion.button>
-        <motion.button initial={{scale: 0}} animate={{scale: 1}} transition={transition}  className={styles.linkedin}>
-          <Icon icon="mdi:linkedin" width={30} height={30} className={styles.icon}/>
-        </motion.button>
-        <motion.button initial={{scale: 0}} animate={{scale: 1}} transition={transition}   className={styles.upworkBtn}>
-          <Icon icon="simple-icons:upwork" width={30} height={30} className={styles.icon}/>
-        </motion.button>
-        <motion.button initial={{scale: 0}} animate={{scale: 1}} transition={transition}   className={styles.githubBtn}>
-          <Icon icon="mdi:github" width={30} height={30} className={styles.icon}/>
-        </motion.button>
-        <motion.button initial={{scale: 0}} animate={{scale: 1}} transition={transition}  className={styles.linkedin}>
-          <Icon icon="mdi:instagram" width={30} height={30} className={styles.icon}/>
-        </motion.button>
+        <a href="tel:+254114576058" target="__blank">
+          <motion.button initial={{scale: 0}} animate={{scale: 1}} transition={transition}  className={styles.linkedin}>
+            <Icon icon="mdi:phone" width={30} height={30} className={styles.icon}/>
+          </motion.button>
+        </a>
+        <a href="https://wa.me/254114576058" target="__blank">
+          <motion.button initial={{scale: 0}} animate={{scale: 1}} transition={transition}  className={styles.linkedin}>
+            <Icon icon="mdi:whatsapp" width={30} height={30} className={styles.icon}/>
+          </motion.button>
+        </a>
+        <a href="mailto:jothamoj@outlook.com" target="__blank">
+          <motion.button initial={{scale: 0}} animate={{scale: 1}} transition={transition}  className={styles.linkedin}>
+            <Icon icon="mdi:mail" width={30} height={30} className={styles.icon}/>
+          </motion.button>
+        </a>
+        <a href="https://www.linkedin.com/in/jotham-jami-705353187/" target="__blank">
+          <motion.button initial={{scale: 0}} animate={{scale: 1}} transition={transition}  className={styles.linkedin}>
+            <Icon icon="mdi:linkedin" width={30} height={30} className={styles.icon}/>
+          </motion.button>
+        </a>
+        <a href="https://www.upwork.com/freelancers/~01b3277a379c95e007?mp_source=share" target="__blank">
+          <motion.button initial={{scale: 0}} animate={{scale: 1}} transition={transition}   className={styles.upworkBtn}>
+            <Icon icon="simple-icons:upwork" width={30} height={30} className={styles.icon}/>
+          </motion.button>
+        </a>
+        <a href="https://github.com/avocademia" target="__blank">
+          <motion.button initial={{scale: 0}} animate={{scale: 1}} transition={transition}   className={styles.githubBtn}>
+            <Icon icon="mdi:github" width={30} height={30} className={styles.icon}/>
+          </motion.button>
+        </a>
+        <a href="https://www.instagram.com/jami.img" target="__blank">
+          <motion.button initial={{scale: 0}} animate={{scale: 1}} transition={transition}  className={styles.linkedin}>
+            <Icon icon="mdi:instagram" width={30} height={30} className={styles.icon}/>
+          </motion.button>
+        </a>
       </div>
     </main>
   )
