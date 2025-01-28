@@ -67,9 +67,10 @@ export default function Home() {
           <motion.div variants={divVariants} initial='hidden' animate='show' className={styles.internal}>
             <Link href='/work'>
               <motion.button variants={buttonVariants} className={styles.pageBtn}>work</motion.button>
+            </Link>    
+            <Link href='/profile'>
+              <motion.button variants={buttonVariants} className={styles.pageBtn}>profile</motion.button>
             </Link>
-            
-            <motion.button variants={buttonVariants} className={styles.pageBtn}>profile</motion.button>
           </motion.div>
           <div className={styles.external}>
             <motion.button initial={{scale: 0}} animate={{scale: 1}} transition={transition}  className={styles.linkedin}>
